@@ -38,12 +38,16 @@ bool SudokuSolver(vector<vector<int>>& sudoku)
             }
         }
     }
-    for(int i = 0; i<sudoku.size(); i++)             // PRINTING THE SOLVED SUDOKU
+    for(int i = 0; i<sudoku.size(); i++)                // printing the solved Sudoku matrix
     {
         for(int j = 0; j < sudoku[i].size(); j++)
         {
+            if(j == 3 || j == 6)
+            cout << "| " ;
             cout << sudoku[i][j]  << " ";
         }
+        if(i == 2 || i == 5)
+        cout << "\n---------------------" ;
         cout << '\n' ;
     }
     return true;
